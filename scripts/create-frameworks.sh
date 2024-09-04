@@ -3,14 +3,14 @@
 set -e
 # set -x
 
-XC_USER_DEFINED_VARS=""
+XC_USER_DEFINED_VARS="MACH_O_TYPE=staticlib"
 
-while getopts ":s" option; do
-   case $option in
-      s) # Build XCFramework as static instead of dynamic
-         XC_USER_DEFINED_VARS="MACH_O_TYPE=staticlib"
-   esac
-done
+# while getopts ":s" option; do
+#    case $option in
+#       s) # Build XCFramework as static instead of dynamic
+#          XC_USER_DEFINED_VARS="MACH_O_TYPE=staticlib"
+#    esac
+# done
 
 BASE_PWD="$PWD"
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
